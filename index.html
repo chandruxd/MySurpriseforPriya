@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff4d6d;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e63950;
+        }
+
+        .gifts {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .gift-box {
+            background: white;
+            margin: 10px auto;
+            padding: 15px;
+            width: 200px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click Below for Your Surprise 🎁</h1>
+    <button onclick="showGifts()">Click Me</button>
+
+    <div class="gifts" id="giftSection">
+        <div class="gift-box">🎁 Gift 1</div>
+        <div class="gift-box">🎁 Gift 2</div>
+        <div class="gift-box">🎁 Gift 3</div>
+        <div class="gift-box">🎁 Gift 4</div>
+    </div>
+
+    <script>
+        function showGifts() {
+            document.getElementById("giftSection").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
