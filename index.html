@@ -1,89 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Special Surprise</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            margin-top: 100px;
-        }
-
-        h1 {
-            color: #fff;
-        }
-
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 8px;
-            background-color: #ff4d6d;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #e63950;
-        }
-
-        .gifts {
-            margin-top: 30px;
-            display: none;
-        }
-
-        .gift-box {
-            background: white;
-            margin: 15px auto;
-            padding: 15px;
-            width: 250px;
-            border-radius: 15px;
-            font-weight: bold;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .gift-box img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine? 💘</title>
+<style>
+  body {
+    text-align: center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  button {
+    padding: 15px 25px;
+    margin: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ff4d6d;
+    color: white;
+    transition: 0.2s;
+  }
+  button:hover {
+    background: #e63950;
+  }
+  #noBtn {
+    position: relative;
+  }
+</style>
 </head>
+
 <body>
 
-    <h1>Click Below for Your Surprise 🎁</h1>
-    <button onclick="showGifts()">Click Me</button>
+<h1>Will You Be My Valentine? 💘</h1>
 
-    <div class="gifts" id="giftSection">
-        
-        <div class="gift-box">
-            🎁 Gift 1
-            <img src="gift1.jpg" alt="Gift 1">
-        </div>
+<button id="yesBtn">YES 💕</button>
+<button id="noBtn">NO 💔</button>
 
-        <div class="gift-box">
-            🎁 Gift 2
-            <img src="gift2.jpg" alt="Gift 2">
-        </div>
+<script>
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
 
-        <div class="gift-box">
-            🎁 Gift 3
-            <img src="gift3.jpg" alt="Gift 3">
-        </div>
+  yesBtn.addEventListener("click", function() {
+    alert("Yay! You said YES! 💖");
+  });
 
-        <div class="gift-box">
-            🎁 Gift 4
-            <img src="gift4.jpg" alt="Gift 4">
-        </div>
-
-    </div>
-
-    <script>
-        function showGifts() {
-            document.getElementById("giftSection").style.display = "block";
-        }
-    </script>
+  noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 150);
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+</script>
 
 </body>
 </html>
